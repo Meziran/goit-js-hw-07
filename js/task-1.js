@@ -1,0 +1,1 @@
+const allEl = document.querySelectorAll('ul');
