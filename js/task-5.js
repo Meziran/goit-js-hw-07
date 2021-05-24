@@ -6,7 +6,7 @@ outputRef.textContent = `незнакомец`;
 inputRef.addEventListener('input', change);
 
 function change(event) {
-  event.currentTarget.value
-    ? (outputRef.textContent = event.currentTarget.value)
-    : (outputRef.textContent = 'незнакомец');
+    event.currentTarget.value.trim() !== '' ?
+        (outputRef.textContent = event.currentTarget.value) :
+        (outputRef.textContent = 'незнакомец');
 }
