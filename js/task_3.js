@@ -12,3 +12,14 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+const ul = document.querySelector("#gallery");
+
+images.forEach((image) => {
+  const li = document.createElement("li");
+  const imageTag = document.createElement("img");
+
+  li.appendChild(imageTag);
+  ul.appendChild(li);
+});
+
+document.body.appendChild(ul);
