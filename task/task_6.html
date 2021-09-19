@@ -5,36 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<link rel="stylesheet" href="/css/style.css" type="application/atom+xml" title="Atom">
 </head>
 <body>
     <div class="title_task"><a  class="link_task" href="../index.html">to tasks </a> <br></div>
     <span> Задание 6<br>
         <span>
-            Напиши скрипт, который бы при потере фокуса на инпуте, проверял его содержимое на правильное количество символов.
-        </span>
+            Напиши скрипт, который бы при потере фокуса на инпуте, 
+            проверял его содержимое на правильное количество символов.
+       Сколько символов должно быть в инпуте, указывается в его атрибуте data-length.
+    Если введено подходящее количество, то border инпута становится зеленым, если неправильное - красным.
+
+Для добавления стилей, используй CSS-классы valid и invalid. </span>
+
+
+    
+
         <input
   type="text"
   id="validation-input"
   data-length="6"
   placeholder="Введи 6 символов"
 />
-
-    Сколько символов должно быть в инпуте, указывается в его атрибуте data-length.
-    Если введено подходящее количество, то border инпута становится зеленым, если неправильное - красным.
-
-Для добавления стилей, используй CSS-классы valid и invalid.
-
-#validation-input {
-  border: 3px solid #bdbdbd;
-}
-
-#validation-input.valid {
-  border-color: #4caf50;
-}
-
-#validation-input.invalid {
-  border-color: #f44336;
-}
 <script src="/js/task_6.js" type="module"></script>
 </body>
 </html>
