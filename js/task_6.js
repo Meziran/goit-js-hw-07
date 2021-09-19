@@ -1,10 +1,15 @@
-let inputElLength = document.querySelector('#validation-input');
+let inputEl = document.querySelector("#validation-input");
 
-inputElLength.addEventListener('blur', changeinputElLength);
+inputEl.addEventListener("blur", changeInputElLength);
 
-function changeinputElLength(e) {
-    const lengthEl = e.currentTarget.value.length;
-    
-       console.log('lengthEl') ; 
-    };
- 
+function changeInputElLength(e) {
+  const inputElLength = Number(inputEl.getAttribute("data-length"));
+  const currentLength = e.currentTarget.value.length;
+  if (inputElLength == currentLength) {
+    inputEl.classList.add("valid");
+    inputEl.classList.remove("invalid");
+  } else {
+    inputEl.classList.add("invalid");
+    inputEl.classList.remove("valid");
+  }
+}
